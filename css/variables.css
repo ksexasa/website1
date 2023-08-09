@@ -1,0 +1,108 @@
+
+/* VARIABLES */
+@font-face {
+  font-family: LIT;
+  src: url("../material/OS_Light.woff");
+}
+@font-face {
+  font-family: REG;
+  src: url("../material/OS_Regular.woff");
+}
+/* @font-face {
+  font-family: MED;
+  src: url("../material/OS_Medium.ttf");
+} */
+@font-face {
+  font-family: SBO;
+  src: url("../material/OS_SemiBold.woff");
+}
+/* @font-face {
+  font-family: BOL;
+  src: url("../material/OS_Bold.ttf");
+} */
+@font-face {
+  font-family: EBO;
+  src: url("../material/OS_ExtraBold.woff");
+}
+
+:root {
+	--maino: rgb(253, 172, 83);
+	--maindark: hsl(31, 98%, 60%);
+	--mainlight:hsl(31, 98%, 72%);
+	/* 
+	--maino: rgb(23, 172, 183);
+	--maindark: hsl(184, 78%, 33%);
+	--mainlight:hsl(184, 78%, 47%); Ωραίο Σιελ */
+	--gg: rgb(74, 74, 74);
+	--ww: rgb(255, 255, 255);
+	--gb: rgb(19, 19, 19);
+	--ff: REG, sans-serif;
+}
+
+/* RESET START*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 1px solid #f00 !important; */
+} 
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: var(--ff)
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+img,
+picture,
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--gg); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gb); 
+}
+
+/* RESET END */
