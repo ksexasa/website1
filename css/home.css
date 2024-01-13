@@ -140,7 +140,6 @@ path{
 	margin-inline:auto;
 }
 
-
 .flexify{
 	display: flex;
 	gap: 1em;
@@ -148,10 +147,10 @@ path{
 	align-items: center;
 }
 
-.flexify2{
-	display: flex;
+.gridify2{
 	gap: 1em;
-	align-items: flex-start;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
 }
 
 .flexify3{
@@ -393,8 +392,198 @@ path{
 
 
 
-/* MEDIA */
 
+
+
+
+
+
+.container{
+	position: relative;
+	margin-top: clamp( 3em , 2em + 2vw + 6vh, 8em);
+	margin-bottom: clamp( 1.5em , 1em + 1vw + 4vh, 4em);
+	display: grid;
+}
+.container .project:not(:first-child) {
+  display: none;
+}
+
+.prev,
+.next {
+  box-sizing:border-box;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 20rem);
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.4s ease;
+}
+
+.next {
+  right: calc(50% - 20rem);
+  left: unset;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: var(--ww);
+  color: var(--gb);
+  outline: 1px solid var(--gb);
+}
+
+.row {
+	margin-inline: auto;
+	max-width: 100%;
+	margin: clamp(1.3rem, 0.9rem + 1vw + 4vh, 4rem) 0 clamp(3em, 2em + 2vw + 6vh, 8em);
+	display: flex;
+	justify-content: center;
+	gap: -3rem;
+}
+
+.demo {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.column{
+	width: 20%;
+	max-width: 209px;
+	min-width: 140px;
+	transform: rotateY(45deg);
+	perspective: 1000px;
+	transition: all 0.4s ease;
+	margin: 0 -3rem;
+}
+.column::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 8px; 
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.4);
+  transition: unset;
+}
+
+.column:hover::after {
+  transition: all 0.4s ease;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.7);
+}
+.column:has(.demo.active)::after {
+  box-shadow: 2.6rem 15px 10px rgba(0, 0, 0, 0.5);
+  transition: unset;
+}
+
+
+
+.row .column:nth-child(1){
+	z-index:10;
+}
+.row .column:nth-child(2){
+	z-index:8;
+}
+.row .column:nth-child(3){
+	z-index:6;
+}
+.row .column:nth-child(4){
+	z-index:4;
+}
+.active,
+.column:hover {
+  transform: translateX(20%);
+}
+
+.column:hover {
+  transform: translateX(10%)!important;
+}
+
+.column:hover ~ * {
+  transform: translateX(20%) rotateY(45deg);
+}
+
+
+/* Style for the container */
+.project {
+  max-width: 350px;
+  margin-inline: auto;
+  margin-top: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the image */
+.project img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style for the text content */
+.project h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: var(--gb);
+}
+
+.project p {
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Style for the price */
+.price {
+  color: var(--mainlight);
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+@media (max-width: 425px) {
+	
+	.column:hover {
+	  transform: unset!important;
+	}
+	.column:hover ~ * {
+	  transform: translateX(-2%) rotateY(45deg);
+	}
+	.active{
+	  transform: translateX(8%);
+	}
+}
 
 @media (max-width: 825px) {
 	main{
@@ -435,6 +624,10 @@ path{
 	
 	.quad,.cards,.footer-nav,.gridify{
 		grid-template-columns: 1fr;
+	}
+	
+	.column{
+		width: calc(1rem + 25vw);
 	}
 	
 	#logo1{
@@ -512,6 +705,18 @@ path{
 	#chorder{
 		order: -1;
 	}
+	
+	.prev {
+	  left: 0;
+	}
+
+	.next {
+	  right: 0;
+	}
+	
+	.project {
+	  max-width: 275px;
+	}
 }
 
 @media (min-width: 825px) and (max-width: 980px) {
@@ -528,9 +733,19 @@ path{
 		grid-column: span 2;
 	}
 	
+	.prev {
+	  left: calc(50% - 15rem);
+	}
 
+	.next {
+	  right: calc(50% - 15rem);
+	}
 
+	.column{
+		width: 40%;
+	}
 }
+
 
 
 

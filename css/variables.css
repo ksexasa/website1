@@ -45,7 +45,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* outline: 1px solid #f00 !important; */
+  /*outline: 1px solid #f00 !important;*/
 } 
 
 body,
@@ -71,6 +71,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+* {
+	min-width: 0px;
+	min-height: 0px;
+}
 
 img,
 picture,
