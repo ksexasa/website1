@@ -1,0 +1,63 @@
+/* TAG NAMES START */
+
+/* TAG NAMES END - CLASSES START*/
+
+/* CLASSES END - IDENTITTIES START */
+
+.container{
+	margin-top: 0px!important;
+	margin-bottom: 0px!important;
+}
+
+.prev,
+.next {
+  top: 55%!important;
+  left: calc(50% - 11rem);
+  padding: 12px;
+}
+
+.next {
+  right: calc(50% - 11rem);
+  left: unset;
+}
+
+/* Style for the container */
+.project {
+  border: none!important;
+  margin-top: 0px!important;
+  border-radius: 2px;
+  max-width: 100%!important;
+}
+
+/* Style for the image */
+.project img {
+  border-bottom: none!important;
+  filter: hue-rotate(99deg);
+}
+
+
+/* MEDIA */
+
+@media (max-width: 825px) {
+	.prev {
+	  left: calc(50% - 40vw);
+	}
+
+	.next {
+	  right: calc(50% - 40vw);
+	}
+}
+
+@media (min-width: 825px) and (max-width: 980px) {	
+	.prev {
+	  left: calc(50% - 9rem);
+	}
+
+	.next {
+	  right: calc(50% - 9rem);
+	}
+}
+
+
+
+
