@@ -1,4 +1,73 @@
+# Force HTTPS redirection
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Block access from specific IP address ranges
+deny from 5.188.62.0/24
+deny from 192.166.246.0/24
+deny from 110.232.84.0/24
+deny from 91.92.251.0/24
+
+# cPanel PHP handler - DO NOT EDIT
+# This domain inherits the “PHP” package.
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
+
+# Allow access to the custom 403 error page
+<Files 403.shtml>
+    order allow,deny
+    allow from all
+</Files>
+
+# Enable browser caching using Expires headers
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Font caching (1 year)
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/font-sfnt "access plus 1 year"
+
+    # Image caching (2 months)
+    ExpiresByType image/jpeg "access plus 2 months"
+    ExpiresByType image/webp "access plus 2 months"
+    ExpiresByType image/png "access plus 2 months"
+    ExpiresByType image/gif "access plus 2 months"
+    ExpiresByType image/svg+xml "access plus 2 months"
+
+    # CSS and JS caching (3 weeks)
+    ExpiresByType text/css "access plus 3 weeks"
+    ExpiresByType application/javascript "access plus 3 weeks"
+</IfModule>
+
+# Enable more robust caching using Cache-Control headers
+<IfModule mod_headers.c>
+    # Font caching (1 year)
+    <FilesMatch "\.(woff2?|ttf|otf)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+
+    # Image caching (2 months)
+    <FilesMatch "\.(jpg|jpeg|webp|png|gif|svg)$">
+        Header set Cache-Control "max-age=5184000, public"
+    </FilesMatch>
+
+    # CSS and JS caching (3 weeks)
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=1814400, public"
+    </FilesMatch>
+</IfModule>
+
+# Define MIME types for fonts, images, CSS, and JS
+AddType font/woff2 .woff2
+AddType font/woff .woff
+AddType application/font-sfnt .ttf .otf
+AddType image/jpeg .jpg .jpeg
+AddType image/webp .webp
+AddType image/png .png
+AddType image/gif .gif
+AddType image/svg+xml .svg
+AddType text/css .css
+AddType application/javascript .js

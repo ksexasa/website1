@@ -16,7 +16,7 @@ h2 {
 	font-weight: 700;
 	font-size: clamp( 29px , 25px + 1.8vw, 72px);
 	line-height: 1.2em;
-	font-family: EBO;
+	font-family: EBO, Arial;
 }
 
 h3{
@@ -26,13 +26,13 @@ h3{
 	color: var(--gb);
 	text-align: left;
 	letter-spacing: -1px;
-	font-family: EBO;
+	font-family: EBO, Arial;
 	margin-top: 0.3em;
 	margin-bottom: clamp( 0.6em , 0.1em + 0.9vw, 1.4em);
 }
 
 h4{
-	font-family: SBO;
+	font-family: SBO, Arial;
 	font-size: clamp( 1.05em , 0.4em + 2.5vw, 1.42em);
 }
 
@@ -42,7 +42,7 @@ p{
 	line-height: 1.27;
 	font-size: clamp( 1em , 0.9em + 0.9vw, 1.1em);
 	margin-bottom: clamp( 1em , 1.9vw, 1.7em);
-	font-family: LIT;
+	font-family: LIT, Arial;
 }
 
 a {
@@ -100,13 +100,13 @@ path{
 	align-items: center;
 	justify-content: space-between;
 	color: var(--gb);
-	font-family: LIT;
+	font-family: LIT, Arial;
 }
 
 .card > div:first-child{
 	padding: 0.4em 0.8em;	
 	background-color: var(--maino);
-	font-family: EBO;
+	font-family: EBO, Arial;
 	font-size: min(1.1em + 3vw, 2.3em);
 	width: 100%;
 }
@@ -125,7 +125,7 @@ path{
 	letter-spacing: 1px;
 	font-size: clamp(0.6em, 0.6em + 0.9vw, 0.8em);
 	padding: 0.04em 0.2em;
-	font-family: SBO;
+	font-family: SBO, Arial;
 }
 
 .topnav{
@@ -158,7 +158,7 @@ path{
 	gap: 1em;
 	align-items: start;
 	flex-direction: column;
-	font-family: LIT;
+	font-family: LIT, Arial;
 	font-size: 0.9em;
 	white-space: nowrap;
 }
@@ -178,7 +178,7 @@ path{
 .topnav-links li a{
 	text-decoration: none;
 	color: var(--ww);
-	font-family: SBO;
+	font-family: SBO, Arial;
 	display: block;
 	padding-left: 0;
 	padding-right: clamp(1.2em, 4vw, 2em);
@@ -190,7 +190,7 @@ path{
 }
 
 .b{
-	font-family: SBO;
+	font-family: SBO, Arial;
 	font-size: clamp( 1.05em , 0.3em + 0.8vw, 1.24em);
 	/* white-space: nowrap; */
 	padding-bottom: 0.6em;
@@ -202,7 +202,7 @@ path{
 }
 
 .big{
-	font-family: EBO;
+	font-family: EBO, Arial;
 	font-size: min( 1.2em + 3.1vw, 2.6em);
 }
 
@@ -219,7 +219,7 @@ path{
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-family: SBO;
+	font-family: SBO, Arial;
 	transition: background-color 0.15s ease-in-out;
 }
 
@@ -358,17 +358,17 @@ path{
 
 #postload1{
 	visibility: hidden;
-	background-image: url(../material/bg2.jpg);
+	background-image: url(../material/bg2.webp);
 }
 
 #postload2{
 	visibility: hidden;
-	background-image: url(../material/bg3.jpg);
+	background-image: url(../material/bg3.webp);
 }
 
 #Hero{
 	background-color: var(--gg);
-	background-image: url(../material/bg1.jpg);
+	background-image: url(../material/bg1.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -381,13 +381,13 @@ path{
 }
 
 @keyframes carouselhero{
-	0% { background-image:url(../material/bg1.jpg); }
-	30% { background-image:url(../material/bg1.jpg); }
-	37% { background-image:url(../material/bg2.jpg); }
-	62% { background-image:url(../material/bg2.jpg); }
-	69% { background-image:url(../material/bg3.jpg); }
-	93% { background-image:url(../material/bg3.jpg); }
-	100% { background-image:url(../material/bg1.jpg); }
+	0% { background-image:url(../material/bg1.webp); }
+	30% { background-image:url(../material/bg1.webp); }
+	37% { background-image:url(../material/bg2.webp); }
+	62% { background-image:url(../material/bg2.webp); }
+	69% { background-image:url(../material/bg3.webp); }
+	93% { background-image:url(../material/bg3.webp); }
+	100% { background-image:url(../material/bg1.webp); }
 }
 
 
@@ -638,24 +638,24 @@ path{
 	#Hero{
 		padding-block: clamp(100px, 13vh, 250px);
 		animation-name: carouselherosm;
-		background-image: url(../material/bg1_sm.jpg);
+		background-image: url(../material/bg1_sm.webp);
 	}
 	@keyframes carouselherosm{
-		0% { background-image:url(../material/bg1_sm.jpg); }
-		30% { background-image:url(../material/bg1_sm.jpg); }
-		37% { background-image:url(../material/bg2_sm.jpg); }
-		62% { background-image:url(../material/bg2_sm.jpg); }
-		69% { background-image:url(../material/bg3_sm.jpg); }
-		93% { background-image:url(../material/bg3_sm.jpg); }
-		100% { background-image:url(../material/bg1_sm.jpg); }
+		0% { background-image:url(../material/bg1_sm.webp); }
+		30% { background-image:url(../material/bg1_sm.webp); }
+		37% { background-image:url(../material/bg2_sm.webp); }
+		62% { background-image:url(../material/bg2_sm.webp); }
+		69% { background-image:url(../material/bg3_sm.webp); }
+		93% { background-image:url(../material/bg3_sm.webp); }
+		100% { background-image:url(../material/bg1_sm.webp); }
 	}
 	
 	#postload1{
-		background-image: url(../material/bg2_sm.jpg);
+		background-image: url(../material/bg2_sm.webp);
 	}
 
 	#postload2{
-		background-image: url(../material/bg3_sm.jpg);
+		background-image: url(../material/bg3_sm.webp);
 	}
 	
 	#profile, #services{

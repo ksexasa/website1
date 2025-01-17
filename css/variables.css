@@ -3,10 +3,12 @@
 @font-face {
   font-family: LIT;
   src: url("../material/OS_Light.woff");
+  font-display: swap;
 }
 @font-face {
   font-family: REG;
   src: url("../material/OS_Regular.woff");
+  font-display: swap;
 }
 /* @font-face {
   font-family: MED;
@@ -15,6 +17,7 @@
 @font-face {
   font-family: SBO;
   src: url("../material/OS_SemiBold.woff");
+  font-display: swap;
 }
 /* @font-face {
   font-family: BOL;
@@ -23,6 +26,7 @@
 @font-face {
   font-family: EBO;
   src: url("../material/OS_ExtraBold.woff");
+  font-display: swap;
 }
 
 :root {

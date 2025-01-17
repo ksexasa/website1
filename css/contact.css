@@ -16,7 +16,7 @@ h2 {
 	font-weight: 700;
 	font-size: clamp( 29px , 25px + 1.8vw, 72px);
 	line-height: 1.2em;
-	font-family: EBO;
+	font-family: EBO, Arial;
 }
 
 h3{
@@ -26,13 +26,13 @@ h3{
 	color: var(--gb);
 	text-align: left;
 	letter-spacing: -1px;
-	font-family: EBO;
+	font-family: EBO, Arial;
 	margin-top: 0.3em;
 	margin-bottom: clamp( 0.6em , 0.1em + 0.9vw, 1.4em);
 }
 
 h4{
-	font-family: SBO;
+	font-family: SBO, Arial;
 	font-size: clamp( 1.05em , 0.4em + 2.5vw, 1.42em);
 }
 
@@ -42,7 +42,7 @@ p{
 	line-height: 1.27;
 	font-size: clamp( 1em , 0.9em + 0.9vw, 1.1em);
 	margin-bottom: clamp( 1em , 1.9vw, 1.7em);
-	font-family: LIT;
+	font-family: LIT, Arial;
 }
 
 a {
@@ -100,13 +100,13 @@ main{
 	align-items: center;
 	justify-content: space-between;
 	color: var(--gb);
-	font-family: LIT;
+	font-family: LIT, Arial;
 }
 
 .card > div:first-child{
 	padding: 0.4em 0.8em;	
 	background-color: var(--maino);
-	font-family: EBO;
+	font-family: EBO, Arial;
 	font-size: min(1.1em + 3vw, 2.3em);
 	width: 100%;
 }
@@ -130,7 +130,7 @@ main{
 	letter-spacing: 1px;
 	font-size: clamp(0.6em, 0.6em + 0.9vw, 0.8em);
 	padding: 0.04em 0.2em;
-	font-family: SBO;
+	font-family: SBO, Arial;
 }
 
 .topnav{
@@ -164,7 +164,7 @@ main{
 	gap: 1em;
 	align-items: start;
 	flex-direction: column;
-	font-family: LIT;
+	font-family: LIT, Arial;
 	font-size: 0.9em;
 	white-space: nowrap;
 }
@@ -184,7 +184,7 @@ main{
 .topnav-links li a{
 	text-decoration: none;
 	color: var(--ww);
-	font-family: SBO;
+	font-family: SBO, Arial;
 	display: block;
 	padding-left: 0;
 	padding-right: clamp(1.2em, 4vw, 2em);
@@ -196,7 +196,7 @@ main{
 }
 
 .b{
-	font-family: SBO;
+	font-family: SBO, Arial;
 	font-size: clamp( 1.05em , 0.3em + 0.8vw, 1.24em);
 	/* white-space: nowrap; */
 	padding-bottom: 0.6em;
@@ -208,7 +208,7 @@ main{
 }
 
 .big{
-	font-family: EBO;
+	font-family: EBO, Arial;
 	font-size: min( 1.2em + 3.1vw, 2.6em);
 }
 
@@ -225,7 +225,7 @@ main{
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-family: SBO;
+	font-family: SBO, Arial;
 	transition: background-color 0.15s ease-in-out;
 }
 
